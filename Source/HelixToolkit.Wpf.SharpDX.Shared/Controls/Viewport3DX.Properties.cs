@@ -520,6 +520,16 @@ namespace HelixToolkit.Wpf.SharpDX
             }));
 
         /// <summary>
+        /// The mouse pan sensitivity property.
+        /// </summary>
+        public static readonly DependencyProperty MousePanSensitivityProperty = DependencyProperty.Register(
+            "MousePanSensitivity", typeof(double), typeof(Viewport3DX), new PropertyMetadata(1.0, (d, e) =>
+            {
+                var viewport = d as Viewport3DX;
+                viewport.CameraController.MousePanSensitivity = (double)e.NewValue;
+            }));
+
+        /// <summary>
         /// The left right rotation sensitivity property.
         /// </summary>
         public static readonly DependencyProperty LeftRightRotationSensitivityProperty = DependencyProperty.Register(
@@ -2174,6 +2184,28 @@ namespace HelixToolkit.Wpf.SharpDX
             set
             {
                 this.SetValue(LeftRightPanSensitivityProperty, value);
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the sensitivity for pan by the mouse.
+        /// </summary>
+        /// <value>
+        /// The pan sensitivity.
+        /// </value>
+        /// <remarks>
+        /// Use -1 to invert the pan direction.
+        /// </remarks>
+        public double MousePanSensitivity
+        {
+            get
+            {
+                return (double)this.GetValue(MousePanSensitivityProperty);
+            }
+
+            set
+            {
+                this.SetValue(MousePanSensitivityProperty, value);
             }
         }
 

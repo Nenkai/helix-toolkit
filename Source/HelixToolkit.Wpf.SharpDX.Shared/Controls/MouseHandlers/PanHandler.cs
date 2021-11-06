@@ -85,7 +85,7 @@ namespace HelixToolkit.Wpf.SharpDX
                 return;
             }
 
-            this.Camera.Position += delta.ToVector3D();
+            this.Camera.Position += delta.ToVector3D() * Controller.MousePanSensitivity;
         }
 
         /// <summary>

@@ -360,6 +360,15 @@ namespace HelixToolkit.Wpf.SharpDX
         public double LeftRightRotationSensitivity = 1.0;
 
         /// <summary>
+        /// Gets or sets the sensitivity for rotation by the mouse.
+        /// </summary>
+        /// <value> The rotation sensitivity. </value>
+        /// <remarks>
+        /// Use -1 to invert the rotation direction.
+        /// </remarks>
+        public double MousePanSensitivity = 1.0;
+
+        /// <summary>
         /// Gets or sets the maximum field of view.
         /// </summary>
         /// <value> The maximum field of view. </value>
