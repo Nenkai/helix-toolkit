@@ -45,6 +45,7 @@ namespace HelixToolkit.Wpf.SharpDX
         public override void Delta(Point e)
         {
             base.Delta(e);
+            
             var thisPoint3D = this.UnProject(e, this.panPoint3D, this.Camera.CameraInternal.LookDirection);
             if (Camera.CameraInternal.LookDirection.LengthSquared() < 1e-5f)
             {
@@ -127,10 +128,13 @@ namespace HelixToolkit.Wpf.SharpDX
         {
             base.Started(e);
             this.panPoint3D = this.Camera.CameraInternal.Target;
+
+            /* Removed - Causes weird panning jumping...
             if (this.MouseDownNearestPoint3D.HasValue)
             {
                 this.panPoint3D = this.MouseDownNearestPoint3D.Value;
-            }
+            }*/
+
             this.LastPoint3D = this.UnProject(this.MouseDownPoint, this.panPoint3D, this.Camera.CameraInternal.LookDirection);
         }
 
