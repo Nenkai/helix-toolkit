@@ -215,7 +215,7 @@ namespace HelixToolkit.Wpf.SharpDX
             if (animationTime == 0)
             {
                 Position = newPosition;
-                LookDirection = newDirection;
+                //LookDirection = newDirection;
                 UpDirection = newUpDirection;
                 aniTime = 0;
             }

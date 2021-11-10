@@ -952,7 +952,7 @@ namespace HelixToolkit.Wpf.SharpDX
         /// <param name="animationTime">
         /// The animation time (milliseconds). 
         /// </param>
-        public void ZoomExtents(double animationTime = 200)
+        public void ZoomExtents(double animationTime = 0)
         {
             if (!this.IsZoomEnabled)
             {

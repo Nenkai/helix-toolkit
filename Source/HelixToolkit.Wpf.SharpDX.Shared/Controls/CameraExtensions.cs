@@ -581,7 +581,9 @@ namespace HelixToolkit.Wpf.SharpDX
                 var dist = Math.Max(disth, distv);
                 var dir = camera.LookDirection;
                 dir.Normalize();
-                LookAt(camera, center, dir * dist, animationTime);
+
+                var newPos = center - ((dir * dist) / 2);
+                camera.AnimateTo(newPos, dir, camera.UpDirection, animationTime);
             }
             else if (camera is IOrthographicCameraModel orth)
             {
