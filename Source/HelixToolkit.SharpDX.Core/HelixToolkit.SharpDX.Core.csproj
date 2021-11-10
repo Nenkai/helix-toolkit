@@ -19,6 +19,7 @@
     <DelaySign>false</DelaySign>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <SignAssembly>False</SignAssembly>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)|$(Configuration)|$(Platform)'=='netstandard1.3|Debug|AnyCPU'">
@@ -37,6 +38,7 @@
   <Import Project="..\HelixToolkit.SharpDX.Shared\HelixToolkit.SharpDX.Shared.projitems" Label="Shared" />
   <Import Project="..\HelixToolkit.Shared\HelixToolkit.Shared.projitems" Label="Shared" />
   <ItemGroup>
+    <None Remove="C:\Users\nenkai\source\repos\GTTrackEditor\HelixToolkit.snk" />
     <None Remove="Resources\arial.dds" />
     <None Remove="Resources\arial.fnt" />
     <None Remove="Resources\csParticleInsert.cso" />

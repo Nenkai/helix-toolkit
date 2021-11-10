@@ -3,10 +3,11 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <SignAssembly>False</SignAssembly>
     </PropertyGroup>
 
     <ItemGroup>
-
+      <None Remove="C:\Users\nenkai\source\repos\GTTrackEditor\HelixToolkit.snk" />
     </ItemGroup>
 
     <ItemGroup>

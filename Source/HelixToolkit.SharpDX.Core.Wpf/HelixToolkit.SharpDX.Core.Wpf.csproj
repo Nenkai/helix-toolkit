@@ -19,6 +19,7 @@
       <RootNamespace>HelixToolkit.Wpf.SharpDX</RootNamespace>
       <DelaySign>false</DelaySign>
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <SignAssembly>False</SignAssembly>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -37,6 +38,10 @@
   <Import Project="..\HelixToolkit.SharpDX.SharedModel\HelixToolkit.SharpDX.SharedModel.projitems" Label="Shared" />
 
   <Import Project="..\HelixToolkit.Wpf.SharpDX.Shared\HelixToolkit.Wpf.SharpDX.Shared.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <None Remove="C:\Users\nenkai\source\repos\GTTrackEditor\HelixToolkit.snk" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="SharpDX.Direct2D1" Version="4.2.0" />
