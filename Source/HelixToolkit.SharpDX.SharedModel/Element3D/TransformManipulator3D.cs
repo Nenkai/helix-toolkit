@@ -98,14 +98,8 @@ namespace HelixToolkit.Wpf.SharpDX
 
         public bool EnableScaling
         {
-            get
-            {
-                return (bool)GetValue(EnableScalingProperty);
-            }
-            set
-            {
-                SetValue(EnableScalingProperty, value);
-            }
+            get => (bool)GetValue(EnableScalingProperty);
+            set => SetValue(EnableScalingProperty, value);
         }
 
         public static readonly DependencyProperty EnableScalingProperty =
@@ -114,17 +108,11 @@ namespace HelixToolkit.Wpf.SharpDX
                 (d as TransformManipulator3D).scaleGroup.IsRendering = (bool)e.NewValue;
             }));
 
-
+        /* Translation properties */
         public bool EnableTranslation
         {
-            get
-            {
-                return (bool)GetValue(EnableTranslationProperty);
-            }
-            set
-            {
-                SetValue(EnableTranslationProperty, value);
-            }
+            get => (bool)GetValue(EnableTranslationProperty);
+            set => SetValue(EnableTranslationProperty, value);
         }
 
         public static readonly DependencyProperty EnableTranslationProperty =
@@ -133,16 +121,47 @@ namespace HelixToolkit.Wpf.SharpDX
                 (d as TransformManipulator3D).translationGroup.IsRendering = (bool)e.NewValue;
             }));
 
+        public bool EnableTranslationX
+        {
+            get => (bool)GetValue(EnableTranslationXProperty);
+            set => SetValue(EnableTranslationXProperty, value);
+        }
+
+        public static readonly DependencyProperty EnableTranslationXProperty =
+            DependencyProperty.Register("EnableTranslationX", typeof(bool), typeof(TransformManipulator3D), new PropertyMetadata(true, (d, e) =>
+            {
+                (d as TransformManipulator3D).translationX.IsRendering = (bool)e.NewValue;
+            }));
+
+        public bool EnableTranslationY
+        {
+            get => (bool)GetValue(EnableTranslationYProperty);
+            set => SetValue(EnableTranslationYProperty, value);
+        }
+
+        public static readonly DependencyProperty EnableTranslationYProperty =
+            DependencyProperty.Register("EnableTranslationY", typeof(bool), typeof(TransformManipulator3D), new PropertyMetadata(true, (d, e) =>
+            {
+                (d as TransformManipulator3D).translationY.IsRendering = (bool)e.NewValue;
+            }));
+
+        public bool EnableTranslationZ
+        {
+            get => (bool)GetValue(EnableTranslationZProperty);
+            set => SetValue(EnableTranslationZProperty, value);
+        }
+
+        public static readonly DependencyProperty EnableTranslationZProperty =
+            DependencyProperty.Register("EnableTranslationZ", typeof(bool), typeof(TransformManipulator3D), new PropertyMetadata(true, (d, e) =>
+            {
+                (d as TransformManipulator3D).translationZ.IsRendering = (bool)e.NewValue;
+            }));
+
+        /* Rotation properties */
         public bool EnableRotation
         {
-            get
-            {
-                return (bool)GetValue(EnableRotationProperty);
-            }
-            set
-            {
-                SetValue(EnableRotationProperty, value);
-            }
+            get => (bool)GetValue(EnableRotationProperty);
+            set => SetValue(EnableRotationProperty, value);
         }
 
         public static readonly DependencyProperty EnableRotationProperty =
@@ -151,17 +170,47 @@ namespace HelixToolkit.Wpf.SharpDX
                 (d as TransformManipulator3D).rotationGroup.IsRendering = (bool)e.NewValue;
             }));
 
+        public bool EnableRotationX
+        {
+            get => (bool)GetValue(EnableRotationXProperty);
+            set => SetValue(EnableRotationXProperty, value);
+        }
 
+        public static readonly DependencyProperty EnableRotationXProperty =
+            DependencyProperty.Register("EnableRotationX", typeof(bool), typeof(TransformManipulator3D), new PropertyMetadata(true, (d, e) =>
+            {
+                (d as TransformManipulator3D).rotationX.IsRendering = (bool)e.NewValue;
+            }));
+
+        public bool EnableRotationY
+        {
+            get => (bool)GetValue(EnableRotationYProperty);
+            set => SetValue(EnableRotationYProperty, value);
+        }
+
+        public static readonly DependencyProperty EnableRotationYProperty =
+            DependencyProperty.Register("EnableRotationY", typeof(bool), typeof(TransformManipulator3D), new PropertyMetadata(true, (d, e) =>
+            {
+                (d as TransformManipulator3D).rotationY.IsRendering = (bool)e.NewValue;
+            }));
+
+        public bool EnableRotationZ
+        {
+            get => (bool)GetValue(EnableRotationZProperty);
+            set => SetValue(EnableRotationZProperty, value);
+        }
+
+        public static readonly DependencyProperty EnableRotationZProperty =
+            DependencyProperty.Register("EnableRotationZ", typeof(bool), typeof(TransformManipulator3D), new PropertyMetadata(true, (d, e) =>
+            {
+                (d as TransformManipulator3D).rotationZ.IsRendering = (bool)e.NewValue;
+            }));
+
+        /* XRay Properties */
         public bool EnableXRayGrid
         {
-            get
-            {
-                return (bool)GetValue(EnableXRayGridProperty);
-            }
-            set
-            {
-                SetValue(EnableXRayGridProperty, value);
-            }
+            get => (bool)GetValue(EnableXRayGridProperty);
+            set => SetValue(EnableXRayGridProperty, value);
         }
 
         public static readonly DependencyProperty EnableXRayGridProperty =
